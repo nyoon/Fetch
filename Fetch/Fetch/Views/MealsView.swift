@@ -8,39 +8,43 @@
 import SwiftUI
 
 struct MealsView: View {
-    var viewModel = MealsViewModel()
+    let viewModel: MealsViewModel
     
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
     var body: some View {
         GeometryReader { geometry in
             let width = geometry.size.width / 1.2
-            
-            ScrollView(.horizontal) {
-                VStack {
-                    Spacer()
-                    
-                    HStack(alignment: .center) {
-                        ForEach(viewModel.meals, id: \.id) { meal in
-                            if let thumbUrl = URL(string: meal.thumb) {
-                                MealCard(
-                                    width: width,
-                                    name: meal.name,
-                                    thumbURL: thumbUrl
-                                )
+            NavigationStack {
+                ScrollView(.horizontal) {
+                    VStack {
+                        Spacer()
+                        
+                        HStack(alignment: .center) {
+                            ForEach(viewModel.meals, id: \.id) { meal in
+                                if let thumbUrl = URL(string: meal.thumb) {
+                                    NavigationLink(value: meal) {
+                                        MealCard(
+                                            width: width,
+                                            name: meal.name,
+                                            thumbURL: thumbUrl
+                                        )
+                                        .navigationDestination(for: Meal.self) { meal in
+                                            MealDetailsView(viewModel: MealDetailsViewModel(meal: meal))
+                                        }
+                                    }
+                                }
                             }
                         }
+                        
+                        Spacer()
                     }
-                    
-                    Spacer()
                 }
+                .contentMargins(12, for: .scrollContent)
             }
-            .contentMargins(12, for: .scrollContent)
         }
-        .onAppear {
-            Task {
-                await viewModel.loadMeals()
-            }
+        .task {
+            await viewModel.loadMeals()
         }
     }
 }
@@ -109,5 +113,5 @@ struct CircularImageView: View {
 }
 
 #Preview {
-    MealsView()
+    MealsView(viewModel: MealsViewModel(type: .dessert))
 }

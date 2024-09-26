@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E1470D162CA5E287002077B6 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1470D152CA5E280002077B6 /* MealsViewModel.swift */; };
+		E1470D182CA5F20B002077B6 /* MealDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1470D172CA5F204002077B6 /* MealDetailsViewModel.swift */; };
 		E1AC76FA2CA3B71D00917ACC /* FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC76F92CA3B71D00917ACC /* FetchApp.swift */; };
 		E1AC76FC2CA3B71D00917ACC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AC76FB2CA3B71D00917ACC /* ContentView.swift */; };
 		E1AC76FE2CA3B72000917ACC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AC76FD2CA3B72000917ACC /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		E1470D152CA5E280002077B6 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
+		E1470D172CA5F204002077B6 /* MealDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewModel.swift; sourceTree = "<group>"; };
 		E1AC76F62CA3B71D00917ACC /* Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fetch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1AC76F92CA3B71D00917ACC /* FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApp.swift; sourceTree = "<group>"; };
 		E1AC76FB2CA3B71D00917ACC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				E1470D152CA5E280002077B6 /* MealsViewModel.swift */,
+				E1470D172CA5F204002077B6 /* MealDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -266,7 +269,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					E1AC76F52CA3B71D00917ACC = {
 						CreatedOnToolsVersion = 15.4;
@@ -342,6 +345,7 @@
 				E1AC77252CA3BF9B00917ACC /* Meal.swift in Sources */,
 				E1AC772C2CA3D8A100917ACC /* MealsInteractor.swift in Sources */,
 				E1AC76FA2CA3B71D00917ACC /* FetchApp.swift in Sources */,
+				E1470D182CA5F20B002077B6 /* MealDetailsViewModel.swift in Sources */,
 				E1470D162CA5E287002077B6 /* MealsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +563,6 @@
 		E1AC771E2CA3B72000917ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -579,7 +582,6 @@
 		E1AC771F2CA3B72000917ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -599,7 +601,6 @@
 		E1AC77212CA3B72000917ACC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5K785Q5R9U;
@@ -617,7 +618,6 @@
 		E1AC77222CA3B72000917ACC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5K785Q5R9U;

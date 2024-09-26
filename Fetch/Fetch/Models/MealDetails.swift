@@ -17,7 +17,7 @@ struct MealDetailsResponse: Codable {
 
 struct MealDetails: Codable {
     let id: String
-    let meal: String
+    let name: String
     let thumb: String
     
     let category: String?
@@ -71,7 +71,7 @@ struct MealDetails: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
-        case meal = "strMeal"
+        case name = "strMeal"
         case thumb = "strMealThumb"
         case category = "strCategory"
         case area = "strArea"

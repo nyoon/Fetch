@@ -15,7 +15,7 @@ struct MealResponse: Codable {
     }
 }
 
-struct Meal: Codable, Identifiable {
+struct Meal: Codable, Identifiable, Hashable {
     let id: String
     let name: String
     let thumb: String
