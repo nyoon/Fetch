@@ -8,9 +8,13 @@
 import Observation
 
 @Observable class MealsViewModel {
-    var meals: [Meal] = []
+    var searchText: String = ""
+    var filteredMeals: [Meal] = []
+    let type: MealType
     
-    private let type: MealType
+    let title = "Sweet Things"
+    
+    private var meals: [Meal] = []
     private let interactor: MealsInteractor
     
     init(type: MealType, interactor: MealsInteractor = MealsInteractor()) {
@@ -26,8 +30,17 @@ import Observation
             let sorted = meals.sorted(by: { $0.name < $1.name })
             
             self.meals = sorted
+            self.filteredMeals = sorted
         } catch {
             print(error)
+        }
+    }
+    
+    func filter() {
+        if searchText.isEmpty {
+            self.filteredMeals = meals
+        } else {
+            self.filteredMeals = meals.filter { $0.name.lowercased().contains(searchText.lowercased())}
         }
     }
 }

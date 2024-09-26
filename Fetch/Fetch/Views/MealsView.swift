@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MealsView: View {
-    let viewModel: MealsViewModel
+    @Bindable var viewModel: MealsViewModel
     
     @Environment(\.verticalSizeClass) var verticalSizeClass
     
@@ -16,12 +16,26 @@ struct MealsView: View {
         GeometryReader { geometry in
             let width = geometry.size.width / 1.2
             NavigationStack {
-                ScrollView(.horizontal) {
-                    VStack {
-                        Spacer()
-                        
+                VStack {
+                    Text(viewModel.title.capitalized)
+                        .font(.system(size: 28, weight: .bold, design: .default))
+                        .foregroundColor(.primary)
+                        .padding(.bottom, 10)
+                        .multilineTextAlignment(.center)
+                        .accessibilityAddTraits(.isHeader)
+                    
+                    TextField("Search \(viewModel.type.rawValue)...", text: $viewModel.searchText)
+                        .frame(width: width)
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .onChange(of: viewModel.searchText) {
+                            viewModel.filter()
+                        }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
                         HStack(alignment: .center) {
-                            ForEach(viewModel.meals, id: \.id) { meal in
+                            ForEach(viewModel.filteredMeals, id: \.id) { meal in
                                 if let thumbUrl = URL(string: meal.thumb) {
                                     NavigationLink(value: meal) {
                                         MealCard(
@@ -36,11 +50,11 @@ struct MealsView: View {
                                 }
                             }
                         }
-                        
-                        Spacer()
                     }
+                    .contentMargins(12, for: .scrollContent)
+                    
+                    Spacer()
                 }
-                .contentMargins(12, for: .scrollContent)
             }
         }
         .task {
