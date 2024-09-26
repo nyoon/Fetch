@@ -15,14 +15,14 @@ struct MealResponse: Codable {
     }
 }
 
-struct Meal: Codable {
+struct Meal: Codable, Identifiable {
     let id: String
-    let meal: String
+    let name: String
     let thumb: String
     
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
-        case meal = "strMeal"
+        case name = "strMeal"
         case thumb = "strMealThumb"
     }
 }
