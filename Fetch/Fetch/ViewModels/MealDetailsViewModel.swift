@@ -45,7 +45,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient2: String? {
@@ -58,7 +58,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient3: String? {
@@ -71,7 +71,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient4: String? {
@@ -84,7 +84,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient5: String? {
@@ -97,7 +97,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient6: String? {
@@ -110,7 +110,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient7: String? {
@@ -123,7 +123,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient8: String? {
@@ -136,7 +136,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient9: String? {
@@ -149,7 +149,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient10: String? {
@@ -162,7 +162,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient11: String? {
@@ -175,7 +175,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient12: String? {
@@ -188,7 +188,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient13: String? {
@@ -201,7 +201,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient14: String? {
@@ -214,7 +214,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient15: String? {
@@ -227,7 +227,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient16: String? {
@@ -240,7 +240,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient17: String? {
@@ -253,7 +253,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient18: String? {
@@ -266,7 +266,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient19: String? {
@@ -279,7 +279,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     var ingredient20: String? {
@@ -292,7 +292,7 @@ import Observation
         else { return nil }
         
         
-        return "\(measure) of \(ingredient)"
+        return "\(measure) \(ingredient)"
     }
     
     // MARK: Fetch
